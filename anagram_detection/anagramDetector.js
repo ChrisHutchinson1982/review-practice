@@ -1,6 +1,6 @@
 class AnagramDetector {
   isAnagram(test, original) {
-    return test === original;
+    return test.toLowerCase() === original.toLowerCase();
   }
 }
 
