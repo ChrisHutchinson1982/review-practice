@@ -1,6 +1,6 @@
 class AnagramDetector {
-  isAnagram() {
-    return true;
+  isAnagram(test, original) {
+    return test === original;
   }
 }
 
