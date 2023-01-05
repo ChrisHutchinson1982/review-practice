@@ -1,9 +1,7 @@
 class StringChecker {
-  solution(stringComplete, stringEnd) {
-    console.log(stringEnd.length);
-    const slicedString = stringComplete.slice(-stringEnd.length);
-
-    return slicedString === stringEnd;
+  solution(str, ending) {
+    const strEnding = str.slice(-ending.length);
+    return strEnding === ending;
   }
 }
 
