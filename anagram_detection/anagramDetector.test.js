@@ -13,4 +13,8 @@ describe("anagramDetector", () => {
     const anagramDetector = new AnagramDetector();
     expect(anagramDetector.isAnagram("Word", "worD")).toBe(true);
   });
+  it("return true when 1st is anagram of 2nd", () => {
+    const anagramDetector = new AnagramDetector();
+    expect(anagramDetector.isAnagram("foefet", "toffee")).toBe(true);
+  });
 });

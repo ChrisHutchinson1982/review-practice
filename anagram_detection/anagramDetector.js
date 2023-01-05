@@ -1,7 +1,10 @@
 class AnagramDetector {
   isAnagram(test, original) {
-    return test.toLowerCase() === original.toLowerCase();
+    const sortStr = (str) => {
+      return str.toLowerCase().split("").sort().join("");
+    };
+
+    return sortStr(test) === sortStr(original);
   }
 }
-
 module.exports = AnagramDetector;
