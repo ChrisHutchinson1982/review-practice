@@ -19,4 +19,8 @@ describe("count grades and return string", () => {
     const gradeCounter = new GradeCounter();
     expect(gradeCounter.countGrades("Red, Red")).toBe("Red: 2\n");
   });
+  it("when mutiple instances of Amaber", () => {
+    const gradeCounter = new GradeCounter();
+    expect(gradeCounter.countGrades("Amber, Amber")).toBe("Amber: 2\n");
+  });
 });
