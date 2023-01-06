@@ -9,4 +9,10 @@ describe("count grades and return string", () => {
     const gradeCounter = new GradeCounter();
     expect(gradeCounter.countGrades("Green, Green, Green")).toBe("Green: 3\n");
   });
+  it("when mutiple instances of Green and Red", () => {
+    const gradeCounter = new GradeCounter();
+    expect(gradeCounter.countGrades("Green, Green, Green, Red, Red")).toBe(
+      "Green: 3\n Red2\n"
+    );
+  });
 });
