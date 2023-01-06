@@ -1,37 +1,40 @@
 class GradeCounter {
   countGrades(string) {
     const arrayOfGrades = string.split(", ");
-    let greenCount = 0;
-    let redCount = 0;
-    let amberCount = 0;
 
+    this.greenCount = 0;
+    this.redCount = 0;
+    this.amberCount = 0;
+
+    this.getCounts(arrayOfGrades);
+
+    const greenGrades = this.formatGrades("Green", this.greenCount);
+    const redGrades = this.formatGrades("Red", this.redCount);
+    const amberGrades = this.formatGrades("Amber", this.amberCount);
+
+    return `${greenGrades}${redGrades}${amberGrades}`;
+  }
+
+  getCounts(arrayOfGrades) {
     arrayOfGrades.forEach((grade) => {
       if (grade === "Green") {
-        greenCount += 1;
+        this.greenCount += 1;
       } else if (grade === "Red") {
-        redCount += 1;
+        this.redCount += 1;
       } else if (grade === "Amber") {
-        amberCount += 1;
+        this.amberCount += 1;
       }
     });
+  }
 
-    let greenString = "";
-    let redString = "";
-    let amberString = "";
-
-    if (greenCount > 0) {
-      greenString = `Green: ${greenCount}\n`;
+  formatGrades(grade, count) {
+    console.log(grade);
+    console.log(count);
+    if (count > 0) {
+      return `${grade}: ${count}\n`;
+    } else {
+      return "";
     }
-
-    if (redCount > 0) {
-      redString = `Red: ${redCount}\n`;
-    }
-
-    if (amberCount > 0) {
-      amberString = `Amber: ${amberCount}\n`;
-    }
-
-    return `${greenString}${redString}${amberString}`;
   }
 }
 
