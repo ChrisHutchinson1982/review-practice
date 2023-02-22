@@ -5,7 +5,10 @@ class ExpandedForm {
     let placeValue = 1;
 
     arrayOfDigits.forEach((digit) => {
-      outputValues.push(digit * placeValue);
+      const outputValue = digit * placeValue;
+      if (outputValue > 0) {
+        outputValues.push(outputValue);
+      }
       placeValue *= 10;
     });
 
