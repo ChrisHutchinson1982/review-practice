@@ -1,6 +1,6 @@
 class ExpandedForm {
   changeToExpandForm(number) {
-    return "1";
+    return number.toString();
   }
 }
 
