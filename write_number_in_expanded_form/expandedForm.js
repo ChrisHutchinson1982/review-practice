@@ -2,14 +2,11 @@ class ExpandedForm {
   changeToExpandForm(number) {
     const arrayOfDigits = String(number).split("").map(Number).reverse();
     let outputValues = [];
-    let placeValue = 1;
 
-    arrayOfDigits.forEach((digit) => {
-      const outputValue = digit * placeValue;
-      if (outputValue > 0) {
-        outputValues.push(outputValue);
+    arrayOfDigits.forEach((digit, index) => {
+      if (digit > 0) {
+        outputValues.push(digit + "0".repeat(index));
       }
-      placeValue *= 10;
     });
 
     return outputValues.reverse().join(" + ");
