@@ -41,4 +41,8 @@ describe("write number in expanded form", () => {
     const expandedForm = new ExpandedForm();
     expect(expandedForm.changeToExpandForm(10)).toEqual("10");
   });
+  it("returns '300' when input is 300", () => {
+    const expandedForm = new ExpandedForm();
+    expect(expandedForm.changeToExpandForm(300)).toEqual("300");
+  });
 });
