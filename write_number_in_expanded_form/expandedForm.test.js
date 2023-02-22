@@ -29,4 +29,8 @@ describe("write number in expanded form", () => {
     const expandedForm = new ExpandedForm();
     expect(expandedForm.changeToExpandForm(122)).toEqual("100 + 20 + 2");
   });
+  it("returns '200 + 10 + 4' when input is 214", () => {
+    const expandedForm = new ExpandedForm();
+    expect(expandedForm.changeToExpandForm(214)).toEqual("200 + 10 + 4");
+  });
 });

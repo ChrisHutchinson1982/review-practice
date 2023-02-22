@@ -1,17 +1,15 @@
 class ExpandedForm {
   changeToExpandForm(number) {
     const arrayOfDigits = String(number).split("").map(Number).reverse();
-    const ones = arrayOfDigits[0];
-    const tens = arrayOfDigits[1] * 10;
-    const hundreds = arrayOfDigits[2] * 100;
+    let outputValues = [];
+    let placeValue = 1;
 
-    if (number > 100) {
-      return `${hundreds} + ${tens} + ${ones}`;
-    } else if (number > 10) {
-      return `${tens} + ${ones}`;
-    } else {
-      return `${ones}`;
-    }
+    arrayOfDigits.forEach((digit) => {
+      outputValues.push(digit * placeValue);
+      placeValue *= 10;
+    });
+
+    return outputValues.reverse().join(" + ");
   }
 }
 
