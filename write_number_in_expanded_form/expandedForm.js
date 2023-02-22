@@ -1,8 +1,11 @@
 class ExpandedForm {
   changeToExpandForm(number) {
-    if (number === 12) {
-      const arrayOfDigits = String(number).split("").map(Number);
-      return `${arrayOfDigits[0] * 10} + ${arrayOfDigits[1]}`;
+    const arrayOfDigits = String(number).split("").map(Number);
+    const ones = arrayOfDigits[1];
+    const tens = arrayOfDigits[0] * 10;
+
+    if (number > 10) {
+      return `${tens} + ${ones}`;
     } else {
       return number.toString();
     }
