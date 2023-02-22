@@ -1,13 +1,13 @@
 class ExpandedForm {
   changeToExpandForm(number) {
-    const arrayOfDigits = String(number).split("").map(Number);
-    const ones = arrayOfDigits[1];
-    const tens = arrayOfDigits[0] * 10;
+    const arrayOfDigits = String(number).split("").map(Number).reverse();
+    const ones = arrayOfDigits[0];
+    const tens = arrayOfDigits[1] * 10;
 
     if (number > 10) {
       return `${tens} + ${ones}`;
     } else {
-      return number.toString();
+      return `${ones}`;
     }
   }
 }

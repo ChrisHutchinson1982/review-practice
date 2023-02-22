@@ -9,9 +9,9 @@ describe("write number in expanded form", () => {
     const expandedForm = new ExpandedForm();
     expect(expandedForm.changeToExpandForm(2)).toEqual("2");
   });
-  it("returns '10' when input is 10", () => {
+  it("returns '9' when input is 9", () => {
     const expandedForm = new ExpandedForm();
-    expect(expandedForm.changeToExpandForm(10)).toEqual("10");
+    expect(expandedForm.changeToExpandForm(9)).toEqual("9");
   });
   it("returns '10 + 2' when input is 12", () => {
     const expandedForm = new ExpandedForm();
@@ -20,5 +20,9 @@ describe("write number in expanded form", () => {
   it("returns '10 + 4' when input is 14", () => {
     const expandedForm = new ExpandedForm();
     expect(expandedForm.changeToExpandForm(14)).toEqual("10 + 4");
+  });
+  it("returns '40 + 2' when input is 42", () => {
+    const expandedForm = new ExpandedForm();
+    expect(expandedForm.changeToExpandForm(42)).toEqual("40 + 2");
   });
 });
