@@ -25,4 +25,8 @@ describe("returns both the minimum and maximum number", () => {
     const highestProfit = new HighestProfit();
     expect(highestProfit.getMinAndMaxValues([2, 1, 3])).toEqual([1, 3]);
   });
+  it("when input is  [2,1,10,2] returns  [1,10]", () => {
+    const highestProfit = new HighestProfit();
+    expect(highestProfit.getMinAndMaxValues([2, 1, 10, 2])).toEqual([1, 10]);
+  });
 });
