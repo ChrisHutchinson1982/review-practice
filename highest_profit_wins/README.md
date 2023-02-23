@@ -8,12 +8,14 @@ Ben has a very simple idea to make some profit: he buys something and sells it a
 
 Write a function that returns both the minimum and maximum number of the given list/array.
 
-| Input       | Output      |
-| ----------- | ----------- |
-| [1,2]       | [1,2]       |
-| [1,5]       | [1,5]       |
-| [1,2,3]     | [1,2,3]     |
-| [1,2,5]     | [1,2,5]     |
-| [1,2,3,4,5] | [1,5]       |
-| [2334454,5] | [5,2334454] |
-| [1]         | [1,1]       |
+| Input        | Output  |
+| ------------ | ------- |
+| [1,2]        | [1,2]   |
+| [1,5]        | [1,5]   |
+| [1,2,3]      | [1,2,3] |
+| [1,2,5]      | [1,2,5] |
+| [2,1,3]      | [1,3]   |
+| [2,1,5]      | [1,5]   |
+| [2,1,10,2]   | [1,10]  |
+| [30,20,30,3] | [3,30]  |
+| [1]          | [1,1]   |
