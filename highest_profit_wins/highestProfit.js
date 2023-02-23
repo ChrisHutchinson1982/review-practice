@@ -1,6 +1,6 @@
 class HighestProfit {
   getMinAndMaxValues(array) {
-    return [array[0], array[array.length - 1]];
+    return [array.sort()[0], array.sort().pop()];
   }
 }
 
