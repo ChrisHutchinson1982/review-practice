@@ -5,7 +5,7 @@ const arrayDiff = (a, b) => {
     newArray.push(indexa);
     b.forEach((indexb) => {
       if (indexa === indexb) {
-        return newArray.pop();
+        newArray.pop();
       }
     });
   });
