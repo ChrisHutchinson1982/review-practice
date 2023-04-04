@@ -1,11 +1,9 @@
 const arrayDiff = (a, b) => {
-  if (a[0] === b[0]) {
-    return [a[1]];
-  } else if (a[1] === b[0]) {
-    return [a[0]];
-  } else {
-    return a;
-  }
+  return a.filter((index) => {
+    if (index !== b[0]) {
+      return index;
+    }
+  });
 };
 
 module.exports = arrayDiff;
