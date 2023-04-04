@@ -22,4 +22,7 @@ describe("Remove all values from list that are present in list b keeping their o
   it("Output [1,2,2] when input is [1,2,2], []", () => {
     expect(arrayDiff([1, 2, 2], [])).toEqual([1, 2, 2]);
   });
+  it("Output [] when input is [], [1,2]", () => {
+    expect(arrayDiff([], [1, 2])).toEqual([]);
+  });
 });
