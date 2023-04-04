@@ -1,9 +1,16 @@
 const arrayDiff = (a, b) => {
-  return a.filter((index) => {
-    if (index !== b[0]) {
-      return index;
-    }
+  const newArray = [];
+
+  a.forEach((indexa) => {
+    newArray.push(indexa);
+    b.forEach((indexb) => {
+      if (indexa === indexb) {
+        return newArray.pop();
+      }
+    });
   });
+
+  return newArray;
 };
 
 module.exports = arrayDiff;
