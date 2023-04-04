@@ -1,0 +1,15 @@
+{
+  "name": "array_diff",
+  "version": "1.0.0",
+  "description": "Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
