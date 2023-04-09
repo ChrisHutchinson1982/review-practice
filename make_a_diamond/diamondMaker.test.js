@@ -31,10 +31,10 @@ describe("make a diamond", () => {
     it("when input 0", () => {
       expect(diamondMaker.diamond(0)).toEqual(null);
     });
-    xit("when input 4", () => {
+    it("when input 4", () => {
       expect(diamondMaker.diamond(2)).toEqual(null);
     });
-    xit("when input 6", () => {
+    it("when input 6", () => {
       expect(diamondMaker.diamond(2)).toEqual(null);
     });
   });
