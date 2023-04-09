@@ -43,10 +43,10 @@ describe("make a diamond", () => {
     it("when input -1", () => {
       expect(diamondMaker.diamond(-1)).toEqual(null);
     });
-    xit("when input -2", () => {
+    it("when input -2", () => {
       expect(diamondMaker.diamond(-2)).toEqual(null);
     });
-    xit("when input -3", () => {
+    it("when input -3", () => {
       expect(diamondMaker.diamond(-3)).toEqual(null);
     });
   });
