@@ -1,18 +1,53 @@
 const DiamondMaker = require("./diamondMaker");
 
 describe("make a diamond", () => {
+  let diamondMaker;
+
+  beforeEach(() => {
+    diamondMaker = new DiamondMaker();
+  });
+
+  describe("return diamond string", () => {
+    it("when input 1", () => {
+      expect(diamondMaker.diamond(1)).toEqual("*\n");
+    });
+    xit("when input 3", () => {
+      expect(diamondMaker.diamond(3)).toEqual(" *\n***\n *\n");
+    });
+    xit("when input 5", () => {
+      expect(diamondMaker.diamond(5)).toEqual("  *\n ***\n*****\n ***\n  *\n");
+    });
+    xit("when input 7", () => {
+      expect(diamondMaker.diamond(6)).toEqual(
+        "   *\n  ***\n *****\n*******\n *****\n  ***\n   *\n"
+      );
+    });
+  });
+
   describe("return null if even number", () => {
     it("when input 2", () => {
-      const diamondMaker = new DiamondMaker();
       expect(diamondMaker.diamond(2)).toEqual(null);
     });
+    xit("when input 0", () => {
+      expect(diamondMaker.diamond(0)).toEqual(null);
+    });
     xit("when input 4", () => {
-      const diamondMaker = new DiamondMaker();
       expect(diamondMaker.diamond(2)).toEqual(null);
     });
     xit("when input 6", () => {
-      const diamondMaker = new DiamondMaker();
       expect(diamondMaker.diamond(2)).toEqual(null);
+    });
+  });
+
+  describe("return null if negative number", () => {
+    xit("when input -1", () => {
+      expect(diamondMaker.diamond(-1)).toEqual(null);
+    });
+    xit("when input -2", () => {
+      expect(diamondMaker.diamond(-2)).toEqual(null);
+    });
+    xit("when input -3", () => {
+      expect(diamondMaker.diamond(-3)).toEqual(null);
     });
   });
 });

@@ -1,6 +1,12 @@
 class DiamondMaker {
   diamond(n) {
-    return null;
+    if (n === 2) {
+      return null;
+    }
+
+    if (n === 1) {
+      return "*\n";
+    }
   }
 }
 
