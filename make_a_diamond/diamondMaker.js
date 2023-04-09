@@ -4,9 +4,22 @@ class DiamondMaker {
       return null;
     }
 
-    if (n === 1) {
-      return "*\n";
+    let diamondString = "";
+    let diamonds = "*";
+    let middleDiamond = n / 2 + 0.5;
+
+    for (let i = 1; i <= n; i++) {
+      let spaces = " ".repeat(Math.abs(i - middleDiamond));
+      let diamondRow = spaces + diamonds + "\n";
+
+      diamondString += diamondRow;
+
+      i < middleDiamond
+        ? (diamonds += "**")
+        : (diamonds = diamonds.slice(0, -2));
     }
+
+    return diamondString;
   }
 }
 
