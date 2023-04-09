@@ -40,7 +40,7 @@ describe("make a diamond", () => {
   });
 
   describe("return null if negative number", () => {
-    xit("when input -1", () => {
+    it("when input -1", () => {
       expect(diamondMaker.diamond(-1)).toEqual(null);
     });
     xit("when input -2", () => {
