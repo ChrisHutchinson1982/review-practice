@@ -28,7 +28,7 @@ describe("make a diamond", () => {
     it("when input 2", () => {
       expect(diamondMaker.diamond(2)).toEqual(null);
     });
-    xit("when input 0", () => {
+    it("when input 0", () => {
       expect(diamondMaker.diamond(0)).toEqual(null);
     });
     xit("when input 4", () => {
