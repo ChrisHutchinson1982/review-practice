@@ -17,8 +17,8 @@ describe("make a diamond", () => {
     it("when input 5", () => {
       expect(diamondMaker.diamond(5)).toEqual("  *\n ***\n*****\n ***\n  *\n");
     });
-    xit("when input 7", () => {
-      expect(diamondMaker.diamond(6)).toEqual(
+    it("when input 7", () => {
+      expect(diamondMaker.diamond(7)).toEqual(
         "   *\n  ***\n *****\n*******\n *****\n  ***\n   *\n"
       );
     });
