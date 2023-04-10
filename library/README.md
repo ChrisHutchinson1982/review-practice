@@ -4,8 +4,8 @@ Creating a quick libary class system for practice purposes.
 
 ## User Stories
 
-- User can add books to library
-- User can print a list of all books
+- User can add books to library - COMPLETE
+- User can print a list of all books - COMPLETE
 - User can print a list of books by author
 - User can checkout a book by index
 - User can checkin a book by index
