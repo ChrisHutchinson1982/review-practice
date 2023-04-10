@@ -5,16 +5,15 @@ class DiamondMaker {
     }
 
     let diamondString = "";
-    let diamonds = "*";
     let middleRow = n / 2 + 0.5;
 
     for (let row = 1; row <= n; row++) {
-      let spaces = " ".repeat(Math.abs(row - middleRow));
-      let diamondRow = spaces + diamonds + "\n";
+      let spaces = Math.abs(row - middleRow);
+      let gap = " ".repeat(spaces);
+      let diamonds = "*".repeat(n - spaces * 2);
 
+      let diamondRow = gap + diamonds + "\n";
       diamondString += diamondRow;
-
-      row < middleRow ? (diamonds += "**") : (diamonds = diamonds.slice(0, -2));
     }
 
     return diamondString;
