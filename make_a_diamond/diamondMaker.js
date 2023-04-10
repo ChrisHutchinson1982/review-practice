@@ -13,6 +13,7 @@ class DiamondMaker {
       let diamonds = "*".repeat(n - spaces * 2);
 
       let diamondRow = gap + diamonds + "\n";
+
       diamondString += diamondRow;
     }
 
