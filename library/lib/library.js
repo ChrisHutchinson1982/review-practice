@@ -11,11 +11,14 @@ class Libary {
     let allBooks = [];
 
     this.contents.forEach((book, index) => {
-      const printBook = `Index: ${index} | Title: ${book.title} | Author: ${book.author} | CheckedOut: ${book.checkedOut}`;
-      allBooks.push(printBook);
+      allBooks.push(this.#printFormat(book, index));
     });
 
     return allBooks.join("/n");
+  }
+
+  #printFormat(book, index) {
+    return `Index: ${index} | Title: ${book.title} | Author: ${book.author} | CheckedOut: ${book.checkedOut}`;
   }
 }
 
