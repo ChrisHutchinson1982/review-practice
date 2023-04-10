@@ -8,14 +8,14 @@ class Libary {
   }
 
   printAllBooks() {
-    let allBooks = "";
+    let allBooks = [];
 
     this.contents.forEach((book, index) => {
       const printBook = `Index: ${index} | Title: ${book.title} | Author: ${book.author} | CheckedOut: ${book.checkedOut}`;
-      allBooks += printBook;
+      allBooks.push(printBook);
     });
 
-    return allBooks;
+    return allBooks.join("/n");
   }
 }
 
